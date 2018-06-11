@@ -15,26 +15,5 @@ import sort.strategy.IStrategy;
  * @author student
  */
 public interface ISortFactory {
-    
-    public static IStrategy ChooseWisely(String s) //wybieranie odpowiedniej metody
-    {
-        MetodySort en = MetodySort.valueOf(s);     
-        IStrategy method = null;
-        
-        switch(en){
-            case bubblesort:
-                method = new Bubblesort();
-                break;
-            case selectionsort:
-                method = new Selectionsort();
-                break;
-            case insertionsort:
-                method = new Insertionsort();
-                break;
-            case quicksort:
-                method = new Quicksort();
-                break;
-        }      
-        return method;
-   }
+    //ChooseWisely
 }

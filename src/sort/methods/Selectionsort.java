@@ -5,9 +5,27 @@
  */
 package sort.methods;
 
+import sort.strategy.IStrategy;
+
 /**
  *
  * @author LeopardProMK
  */
-public class Selectionsort {
+
+public class Selectionsort implements IStrategy{
+    @Override
+    public double[] Idosort(double tab[]){
+       for (int i = 0; i < tab.length - 1; i++)
+        {
+            int index = i;
+            for (int j = i + 1; j < tab.length; j++)
+                if (tab[j] < tab[index]) 
+                    index = j;
+      
+            double smallerNumber = tab[index];  
+            tab[index] = tab[i];
+            tab[i] = smallerNumber;
+        }
+        return tab;
+    }
 }

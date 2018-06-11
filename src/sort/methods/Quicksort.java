@@ -5,12 +5,20 @@
  */
 package sort.methods;
 
+import sort.strategy.IStrategy;
+
 /**
  *
  * @author LeopardProMK
  */
-public class Quicksort {
+
+public class Quicksort implements IStrategy{
+    @Override
+    public double[] Idosort(double tab[]){
+        return tab;
+    }
+}
     /* http://www.algorytm.org/algorytmy-sortowania/sortowanie-szybkie-quicksort/quick-j.html */
     
     
-}
+

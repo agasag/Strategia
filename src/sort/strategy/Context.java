@@ -9,6 +9,14 @@ package sort.strategy;
  *
  * @author student
  */
-public interface IStrategy {
-    public double[] Idosort(double tab[]);
+public class Context {
+   private IStrategy strategy;
+
+   public Context(IStrategy strategy){
+      this.strategy = strategy;
+   }
+
+   public double[] executeStrategy(double tablica[]){
+      return strategy.Idosort(tablica);
+   } 
 }
